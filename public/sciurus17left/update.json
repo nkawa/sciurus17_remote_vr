@@ -2,7 +2,13 @@
   "base_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "Base.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "Base.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "Base.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {"$": {"rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
@@ -10,7 +16,13 @@
   "body_link": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "Body.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "Body.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "Body.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {"$": {"rpy": [1.5707963267948966, 0, 0]}}
       }
     ]
@@ -18,7 +30,13 @@
   "l_link1": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link1.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link1.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {"$": {"rpy": [-0.0000036732051034160666, 0, 0], "xyz": [0, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link1.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {"$": {"rpy": [-0.0000036732051034160666, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
@@ -26,7 +44,18 @@
   "l_link2": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link2.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link2.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {
+          "$": {
+            "rpy": [1.5707963267948966, -6.123233995695457e-17, 1.5708],
+            "xyz": [0, 0, 0]
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link2.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {
           "$": {
             "rpy": [1.5707963267948966, -6.123233995695457e-17, 1.5708],
@@ -39,7 +68,13 @@
   "l_link3": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link3.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link3.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {"$": {"rpy": [-0.0000036732051034160666, 0, 0], "xyz": [0, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link3.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {"$": {"rpy": [-0.0000036732051034160666, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
@@ -47,7 +82,13 @@
   "l_link4": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link4.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link4.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link4.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
@@ -55,11 +96,19 @@
   "l_link5": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link5.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link5.gltf", "scale": "1.0 1.0 1.0"}}},
         "origin": {"$": {"rpy": [-0.0000036732051034160666, 0, 0], "xyz": [0, 0, 0]}}
       },
       {
-        "geometry": {"mesh": {"$": {"filename": "Logo_Rabbit.gltf"}}},
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link5.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
+        "origin": {"$": {"rpy": [-0.0000036732051034160666, 0, 0], "xyz": [0, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "Logo_Rabbit.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {
           "$": {
             "rpy": [1.570796433973574, -1.047192653589791, -3.1415925607705986],
@@ -68,7 +117,31 @@
         }
       },
       {
-        "geometry": {"mesh": {"$": {"filename": "Logo_Corp.gltf"}}},
+        "geometry": {
+          "mesh": {"$": {"filename": "Logo_Rabbit.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
+        "origin": {
+          "$": {
+            "rpy": [1.570796433973574, -1.047192653589791, -3.1415925607705986],
+            "xyz": [0.032, 0.074, -0.0346]
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "Logo_Corp.gltf", "scale": "1.0 1.0 1.0"}}
+        },
+        "origin": {
+          "$": {
+            "rpy": [1.570796433973574, -1.047192653589791, -3.1415925607705986],
+            "xyz": [0.013, 0.107, -0.0346]
+          }
+        }
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "Logo_Corp.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {
           "$": {
             "rpy": [1.570796433973574, -1.047192653589791, -3.1415925607705986],
@@ -81,7 +154,13 @@
   "l_link6": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link6.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link6.gltf", "scale": "1.0 1.0 1.0"}}},
+        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
+      },
+      {
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link6.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
         "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
@@ -89,16 +168,14 @@
   "l_link7": {
     "visual": [
       {
-        "geometry": {"mesh": {"$": {"filename": "L_Link7.gltf"}}},
+        "geometry": {"mesh": {"$": {"filename": "L_Link7.gltf", "scale": "1.0 1.0 1.0"}}},
         "origin": {"$": {"rpy": [-3.14158898038469, 0, 0], "xyz": [0, 0, 0]}}
-      }
-    ]
-  },
-  "l_gripperB_link": {
-    "visual": [
+      },
       {
-        "geometry": {"mesh": {"$": {"filename": "L_GripperB.gltf"}}},
-        "origin": {"$": {"rpy": [1.5707963267948966, 0, 0], "xyz": [0, 0, 0]}}
+        "geometry": {
+          "mesh": {"$": {"filename": "L_Link7.bbox.gltf", "scale": "1.0 1.0 1.0"}}
+        },
+        "origin": {"$": {"rpy": [-3.14158898038469, 0, 0], "xyz": [0, 0, 0]}}
       }
     ]
   }

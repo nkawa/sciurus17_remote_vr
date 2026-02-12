@@ -36,12 +36,7 @@
     "parent": {"$": {"link": "l_link1"}},
     "child": {"$": {"link": "l_link2"}},
     "limit": {
-      "$": {
-        "effort": 4,
-        "lower": 0,
-        "upper": 1.6057029118347832,
-        "velocity": 5.969211435
-      }
+      "$": {"effort": 4, "lower": 0, "upper": 1.6057029118347832, "velocity": 5.969211435}
     },
     "axis": {"$": {"xyz": [-1, 0, 0]}},
     "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
@@ -126,24 +121,5 @@
     "axis": {"$": {"xyz": [0, 1, 0]}},
     "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
     "origin": {"$": {"xyz": [0, 0.0191, 0], "rpy": [0, 0, 0]}}
-  },
-  "l_gripper_mimic_joint": {
-    "$": {"name": "l_gripper_mimic_joint", "type": "revolute"},
-    "parent": {"$": {"link": "l_link7"}},
-    "child": {"$": {"link": "l_gripperB_link"}},
-    "limit": {
-      "$": {
-        "effort": 4,
-        "lower": -1.5009831567151235,
-        "upper": 0.0008726646259971648,
-        "velocity": 5.969211435
-      }
-    },
-    "axis": {"$": {"xyz": [0, 0, -1]}},
-    "mimic": {
-      "$": {"joint": "l_gripper_joint", "multiplier": "1", "offset": "0"}
-    },
-    "dynamics": {"$": {"damping": "1.0e-6", "friction": "0.8"}},
-    "origin": {"$": {"xyz": [-0.012, 0.024, 0], "rpy": [0, 0, 0]}}
   }
 }
