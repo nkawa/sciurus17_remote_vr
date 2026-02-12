@@ -71,7 +71,7 @@ const waitSlrmReady = async (robotDOMRef, message) => {
       //                  console.log("Waiting for SLRM_READY...", workerStatus);
       count++;
       if (count % 10 ==0) console.log("wait READY",count, workerData.current.status)
-      if (count > 100) { // 10秒待っても来なかったら諦める
+      if (count > 200) { // 20秒待っても来なかったら諦める
         console.log(message, workerData.current.status);
         received = false;
         break;
@@ -84,6 +84,8 @@ const waitSlrmReady = async (robotDOMRef, message) => {
 
 
 export const setupMQTT = (props, robotIDRef, robotRightDOMRef,robotLeftDOMRef, set_draw_ready) => {
+  console.log("Working!?");
+  console.log("setupMQTT called");//, robotIDRef, robotRightDOMRef,robotLeftDOMRef);
   firstReceiveJoint = true; // 最初のジョイント受信フラグ
   receive_state = JointReceiveStatus.WAITING // 実ロボットからの受信状態
 
@@ -208,13 +210,22 @@ export const setupMQTT = (props, robotIDRef, robotRightDOMRef,robotLeftDOMRef, s
             console.log("First joint Received joints",data)
 
             receive_state = JointReceiveStatus.JOINT_RECEIVED;
+//            console.log("Joint received:", data);
+            console.log("First joint Received joint2");
+            if (robotRightDOMRef.current != null){
+              console.log("Good ref");
+            }else{
+              console.log("Bad ref");
+            }
+
             if (robotRightDOMRef.current && robotRightDOMRef.current.workerRef) {
               const workerRightRef = robotRightDOMRef.current.workerRef;
+
               const workerLeftRef = robotLeftDOMRef.current.workerRef;
               let right = data.right
               let left = data.left
      
-              console.log("Got Robot POSE to workerRef:", workerRightRef, left,right)
+              console.log("Got Robot POSE to workerRef:",  left,right)
               
               workerRightRef.current?.postMessage(
                 {

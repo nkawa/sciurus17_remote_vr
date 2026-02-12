@@ -10,17 +10,17 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@ucl-nuee/ik-cd-worker": "^0.2.19",
-    "@ucl-nuee/robot-loader": "^1.0.18",
-    "@ucl-nuee/sciurus17left": "^1.0.1",
-    "@ucl-nuee/sciurus17right": "^1.0.1",
+    "@ucl-nuee/sciurus17": "^1.1.1",
     "aframe": "^1.7.1",
     "mqtt": "^5.14.1",
     "bootstrap": "^5.3.8",
     "sora-js-sdk": "^2025.2.0",
     "next": "16.1.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "@ucl-nuee/ik-cd-worker": "0.3.1",
+    "@ucl-nuee/robot-loader": "1.0.29"
+
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -1,5 +1,7 @@
 "use client";
-import mqtt from 'mqtt'
+//import mqtt from 'mqtt'
+import mqtt from "mqtt";
+
 import package_info from '../../package.json' // load version
 
 console.log("Package_Info",package_info.name, package_info.version);
