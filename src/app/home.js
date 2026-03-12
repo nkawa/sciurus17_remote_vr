@@ -24,6 +24,8 @@ import '@ucl-nuee/robot-loader/reflectCollision.js';
 import '@ucl-nuee/robot-loader/reflectJointLimits.js';
 import '@ucl-nuee/robot-loader/ChangeOpacity.js';
 import '@ucl-nuee/robot-loader/fingerCloser.js';
+//import '@ucl-nuee/ik-cd-worker/IkWorkerParamsComponents.js';
+
 
 //import '../compo_aframe/ChangeOpacity.js';
 import '../compo_aframe/mqttSender.js';
@@ -137,6 +139,10 @@ export default function Home(props) {
   }, [draw_ready]);
 */
 
+//              toSchema([0, -deg22, deg45, -deg45, -deg90, 0, deg67, 0])}
+//               toSchema([deg22, -deg45, deg45, deg90, 0, -deg67, 0])}
+
+
   return (
     <>
       <a-scene xr-mode-ui={`enabled: ${!(props.appmode === AppMode.viewer) ? 'true' : 'false'}; XRMode: xr`} >
@@ -192,15 +198,16 @@ export default function Home(props) {
             material="opacity: 0.5; transparent: true; side: double;"
             robot-loader="model: sciurus17left"
             ik-worker={
-              toSchema([0, -deg22, deg45, -deg45, -deg90, 0, deg67, 0])}
+              toSchema([0, 0.3282, 1.5692, -0.004, -2.7166, -0.003, 2.0908, -0.0015])}
             joint-desirable={
                    toSchema({gain: {1:21, 2:21, 6:21},
                     			    upper: {1:-deg45, 2:deg67, 6:deg67},
 			                        lower: {1:-deg45, 2:deg67, 6:deg67}})}
             joint-desirable-vlimit="all: 0.5"
-            joint-weight="override: 0:0.0064"
+            joint-weight="override: 0:0.0016"
             reflect-worker-joints
             reflect-collision="color: yellow"
+            set-joint-limit-keep-moving="true"
             reflect-joint-limits
             add-frame-to-joints="from: 0; to: 1"
             arm-motion-ui
@@ -239,12 +246,13 @@ export default function Home(props) {
             robot-loader="model: sciurus17right"
             attach-to-another="to: sciurus-l-arm; axis: 1"
             ik-worker={
-                   toSchema([deg22, -deg45, deg45, deg90, 0, -deg67, 0])}
+                   toSchema([-0.3175, -1.5708, -0.0015, 2.7259, 0, -2.0739, 0.0015])}
             joint-desirable={
                    toSchema({gain: {0:21, 1:21, 5:21},
                               upper: {0:deg45, 1:-deg67, 5:-deg67},
 			                        lower: {0:deg45, 1:-deg67, 5:-deg67}})}
             joint-desirable-vlimit="all: 0.5"
+            set-joint-limit-keep-moving="true"
             reflect-worker-joints
             reflect-collision="color: yellow"
             reflect-joint-limits

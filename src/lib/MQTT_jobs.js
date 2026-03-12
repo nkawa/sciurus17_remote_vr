@@ -210,8 +210,6 @@ export const setupMQTT = (props, robotIDRef, robotRightDOMRef,robotLeftDOMRef, s
             console.log("First joint Received joints",data)
 
             receive_state = JointReceiveStatus.JOINT_RECEIVED;
-//            console.log("Joint received:", data);
-            console.log("First joint Received joint2");
             if (robotRightDOMRef.current != null){
               console.log("Good ref");
             }else{
@@ -222,8 +220,8 @@ export const setupMQTT = (props, robotIDRef, robotRightDOMRef,robotLeftDOMRef, s
               const workerRightRef = robotRightDOMRef.current.workerRef;
 
               const workerLeftRef = robotLeftDOMRef.current.workerRef;
-              let right = data.right
-              let left = data.left
+              let left = data.joints.slice(0,8)
+              let right = data.joints.slice(9,16)
      
               console.log("Got Robot POSE to workerRef:",  left,right)
               
