@@ -49,7 +49,7 @@ AFRAME.registerComponent('mqtt-sender', {
         console.log("mqtt-sender: waiting for finger-closer jointValues...");
         return;
       }
-      const conc = Array.from(leftJointData).concat([-lh[0]]).concat(Array.from(rightJointData)).concat([-rh[0]]);
+      const conc = Array.from(leftJointData).concat([lh[0]]).concat(Array.from(rightJointData)).concat([rh[0]]);
 //      const conc = concatFloat64(leftJointData,[lh[0]], rightJointData,rh);
 //      console.dir(this.data.lh);
       const ctrl_json = JSON.stringify({

@@ -24,7 +24,7 @@ import '@ucl-nuee/robot-loader/reflectCollision.js';
 import '@ucl-nuee/robot-loader/reflectJointLimits.js';
 import '@ucl-nuee/robot-loader/ChangeOpacity.js';
 import '@ucl-nuee/robot-loader/fingerCloser.js';
-//import '@ucl-nuee/ik-cd-worker/IkWorkerParamsComponents.js';
+import '@ucl-nuee/ik-cd-worker/IkWorkerParamsComponents.js';
 
 
 //import '../compo_aframe/ChangeOpacity.js';
@@ -224,7 +224,8 @@ export default function Home(props) {
                                              closeEvent: 'xbuttondown',
                                              closeStopEvent: 'xbuttonup',
                                              openEvent: 'ybuttondown',
-                                             openStopEvent: 'ybuttonup'})}
+                                             openStopEvent: 'ybuttonup',
+                                                interval: 0.05})}
             />
             <a-circle id="sciurus-lgripperB"
                     radius="0.03" color="blue"

@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@ucl-nuee/ik-cd-worker':
-        specifier: 0.3.1
-        version: 0.3.1(@msgpack/msgpack@3.1.3)(aframe@1.7.1)
+        specifier: 0.4.7
+        version: 0.4.7(@msgpack/msgpack@3.1.3)(aframe@1.7.1)
       '@ucl-nuee/robot-loader':
-        specifier: 1.0.29
-        version: 1.0.29(@msgpack/msgpack@3.1.3)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+        specifier: 1.1.3
+        version: 1.1.3(@msgpack/msgpack@3.1.3)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@ucl-nuee/sciurus17':
         specifier: ^1.1.1
         version: 1.1.1
@@ -677,22 +677,15 @@ packages:
     resolution: {integrity: sha512-LZ2NqIHFhvFwxG0qZeLL9DvdNAHPGCY5dIRwBhyYeU+LfLhcStE1ImjsuTG/WaVh3XysGaeLW8Rqq7cGkPCFvw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@ucl-nuee/ik-cd-worker@0.2.25':
-    resolution: {integrity: sha512-1vpNK1KePusOiCT7eCu1rCJFH0Ge0H6u0/8Dwmi0O7sh0/ta/+m131hL1SmHAUR1VLjI1ofg9xgRNXUr3944iw==, tarball: https://npm.pkg.github.com/download/@ucl-nuee/ik-cd-worker/0.2.25/b25ce892587a504faebd79252a9afba1ddecfd02}
+  '@ucl-nuee/ik-cd-worker@0.4.7':
+    resolution: {integrity: sha512-jy0s+96dPCpee01q8d64wh0GwEjeFbAWVoUq/3jGEn3RSiTDV1aKqt5+9wSi+3AKmZSTwF0sqiTOryhLAozb5Q==, tarball: https://npm.pkg.github.com/download/@ucl-nuee/ik-cd-worker/0.4.7/a08fb38928d20b962f3eb4b18ddca98e10a868ee}
     hasBin: true
     peerDependencies:
       '@msgpack/msgpack': ^3.1.2
       aframe: ^1.7.1
 
-  '@ucl-nuee/ik-cd-worker@0.3.1':
-    resolution: {integrity: sha512-vP/147C/YkK4OuyYk0uqaubf8GSFIkcJ2uHvkudhS/gQ4YXDANDNmFbo6qtbxR6rAAJxZfAamDj06rO0V8LqHg==, tarball: https://npm.pkg.github.com/download/@ucl-nuee/ik-cd-worker/0.3.1/aee223142d307f590a502f997f4a646ab6afb398}
-    hasBin: true
-    peerDependencies:
-      '@msgpack/msgpack': ^3.1.2
-      aframe: ^1.7.1
-
-  '@ucl-nuee/robot-loader@1.0.29':
-    resolution: {integrity: sha512-5rX3GC3waBX0ku/IPCQvJiq/gR+rUG8Jtreb61ktqPHreLsXzY0r6pxpn/ZdGubAvZtbSOeOlyGK/E3ZNHyEMw==, tarball: https://npm.pkg.github.com/download/@ucl-nuee/robot-loader/1.0.29/70eec45c7df6053725e6d3161a0610d3a7234b07}
+  '@ucl-nuee/robot-loader@1.1.3':
+    resolution: {integrity: sha512-G+q122Ec0C1DnuET0aIabjSQ4pB0TMDgi9D5D2kgfZOdxlBtoicTBTulc4QAXny35Fi5DEW9et0SxUNpdPCN4A==, tarball: https://npm.pkg.github.com/download/@ucl-nuee/robot-loader/1.1.3/ad7427d56886011014326130aebe9b111767353b}
     hasBin: true
 
   '@ucl-nuee/sciurus17@1.1.1':
@@ -3296,19 +3289,14 @@ snapshots:
       '@typescript-eslint/types': 8.53.0
       eslint-visitor-keys: 4.2.1
 
-  '@ucl-nuee/ik-cd-worker@0.2.25(@msgpack/msgpack@3.1.3)(aframe@1.7.1)':
+  '@ucl-nuee/ik-cd-worker@0.4.7(@msgpack/msgpack@3.1.3)(aframe@1.7.1)':
     dependencies:
       '@msgpack/msgpack': 3.1.3
       aframe: 1.7.1
 
-  '@ucl-nuee/ik-cd-worker@0.3.1(@msgpack/msgpack@3.1.3)(aframe@1.7.1)':
+  '@ucl-nuee/robot-loader@1.1.3(@msgpack/msgpack@3.1.3)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)':
     dependencies:
-      '@msgpack/msgpack': 3.1.3
-      aframe: 1.7.1
-
-  '@ucl-nuee/robot-loader@1.0.29(@msgpack/msgpack@3.1.3)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)':
-    dependencies:
-      '@ucl-nuee/ik-cd-worker': 0.2.25(@msgpack/msgpack@3.1.3)(aframe@1.7.1)
+      '@ucl-nuee/ik-cd-worker': 0.4.7(@msgpack/msgpack@3.1.3)(aframe@1.7.1)
       aframe: 1.7.1
       eslint-plugin-react: 7.37.5(eslint@9.39.2(jiti@2.6.1))
       madge: 8.0.0(typescript@5.9.3)

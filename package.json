@@ -19,7 +19,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "@ucl-nuee/ik-cd-worker": "0.4.7",
-    "@ucl-nuee/robot-loader": "1.1.1"
+    "@ucl-nuee/robot-loader": "1.1.3"
 
   },
   "devDependencies": {
